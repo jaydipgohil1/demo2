@@ -26,175 +26,274 @@
     padding: 10px;
   }
 
-    tr:hover {
-        color: black;
-        background-color: deepskyblue;
-        border-radius: 25px;
-    }
+  tr:hover {
+    color: black;
+    background-color: deepskyblue;
+    border-radius: 25px;
+  }
 
 
-    table {
-        width: 100%;
-        border-spacing: 30px;
+  table {
+    width: 100%;
+    border-spacing: 30px;
 
-    }
+  }
 
-    .table2 {
-        border-bottom: 1px solid #ddd;
-    }
+  .table2 {
+    border-bottom: 1px solid #ddd;
+  }
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333333;
-    }
-    li {
-        float: left;
-    }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
 
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 16px;
-        text-decoration: none;
-    }
 
-    li a:hover {
-        background-color: #111111;
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Style the header */
+  header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 30%;
+    height: 300px;
+    /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+
+  }
+
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+
+  }
+
+  article {
+    float: left;
+    padding: 20px;
+    width: 100%;
+    background-color: antiquewhite;
+    color: teal;
+    height: 300px;
+    /* only for demonstration, should be removed */
+  }
+
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+
+    nav,
+    article {
+      width: 100%;
+      height: auto;
     }
+  }
+
+  .color {
+    color: sienna;
+  }
 </style>
 <script>
-    function image() {
-        window.location.href = "https://www.w3schools.com/tags/pic_trulli.jpg";
-    }
+  function image() {
+    window.location.href = "https://www.w3schools.com/tags/pic_trulli.jpg";
+  }
 </script>
 
 <body>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-    <h1>hello this is demo git projects</h1>
-    <h3>by jaydip gohil</h3>
-    <h5>thank you</h5>
-    <p id="demo" onclick="alert('hi jaydip ')">hello jaydip</p>
-    <ol>game
-        <li>cricket</li>
-        <li>ludo</li>
-        <li>tenis</li>
-    </ol>
-    <ul>game
-        <li>cricket</li>
-        <li>ludo</li>
-        <li>tenis</li>
-    </ul>
-    <blockquote>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis bibendum leo. Fusce et diam arcu. Donec
-        vel orci tortor. Cras vel erat blandit justo lobortis venenatis ac quis dolor. Donec nec facilisis tortor, sit
-        amet ornare odio. Nulla luctus leo ut pulvinar porttitor. Quisque dignissim scelerisque malesuada. Cras tempor
-        nunc dapibus lorem hendrerit, et aliquet ligula feugiat. Fusce at dolor nulla. Nunc non posuere est, eget
-        consequat odio. Vivamus imperdiet maximus lectus vel volutpat. Curabitur volutpat feugiat neque ac viverra.
 
-        Cras vitae erat venenatis, bibendum est sit amet, aliquet elit. Proin neque elit, venenatis ut porta nec, congue
-        at magna. Quisque quis eros sodales orci ornare ornare vitae vel neque. Mauris a magna at odio sodales viverra
-        sed commodo neque. Fusce in pharetra magna. Integer sed quam at dolor malesuada dictum non ac est. Sed luctus
-        imperdiet mauris, non laoreet diam ultricies non. Cras sit amet dignissim erat, porttitor pretium urna. Nullam
-        mollis lorem et auctor scelerisque. Donec ac metus rhoncus, rhoncus erat ornare, luctus nulla. Donec accumsan
-        ultricies cursus. Nulla quis ipsum quis nulla venenatis ultricies. Pellentesque consectetur, nisl id venenatis
-        congue, magna sem rutrum sem, ut accumsan nisl erat nec magna.
+  <header>
+    <h2>Cities</h2>
+  </header>
 
-        Suspendisse tempor eget augue a pretium. Phasellus in quam elementum neque posuere tristique. Nullam dapibus
-        augue id dapibus iaculis. Mauris tempus congue ligula, ut pellentesque neque consectetur et. Phasellus sodales
-        bibendum nibh, ac suscipit est pretium at. Phasellus mauris sapien, tincidunt quis mattis id, dapibus ut orci.
-        Sed quis dolor nulla.
+  <section>
+    <nav>
+      <ul>
+        <li><a href="#">London</a></li>
+        <li><a href="#">Paris</a></li>
+        <li><a href="#">Tokyo</a></li>
+      </ul>
+    </nav>
 
-        Ut id facilisis metus. Pellentesque eu mollis libero. Sed at sagittis nulla. Nam facilisis sapien vel egestas
-        laoreet. Nam fermentum nisi sed dapibus pellentesque. Fusce vitae ligula convallis, tincidunt mauris ac, sodales
-        mi. Nunc at porta elit. Suspendisse placerat vehicula diam id sollicitudin. Nam sollicitudin lectus risus,
-        pharetra auctor nulla ultrices non. Mauris sit amet dolor vitae sem viverra tincidunt. Phasellus tincidunt eros
-        non mi consequat, ac finibus diam rutrum. Sed consequat eget urna et posuere. Sed sollicitudin ipsum vitae
-        sapien imperdiet porta.
+    <article>
+      <h1 class="color">London</h1>
+      <p class="color">London is the capital city of England. It is the most populous city in the United Kingdom, with a
+        metropolitan area of over 13 million inhabitants.</p>
+      <p class="color">Standing on the River Thames, London has been a major settlement for two millennia, its history
+        going back to its founding by the Romans, who named it Londinium.</p>
+    </article>
+  </section>
 
-        Fusce blandit diam turpis, nec feugiat quam tempus a. Sed gravida, quam id dapibus venenatis, justo diam tempus
-        velit, eget lacinia purus nulla quis purus. Mauris porttitor id dui quis ornare. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis velit sit
-        amet metus rutrum aliquet. Curabitur ac ultrices risus. Aliquam molestie lorem vitae massa ultrices, quis
-        pretium ligula facilisis. Nullam fermentum molestie urna eget venenatis. Pellentesque sit amet scelerisque
-        magna. Donec dolor orci, pharetra ut sem id, dignissim ornare risus. Fusce iaculis vulputate bibendum</p>
-    </blockquote>
-    <a href="https://www.w3schools.com/" target="_self"> _self!</a> <br>
-    <a href="https://www.w3schools.com/" target="_blank">_blank W3Schools!</a> <br>
-    <a href="https://www.w3schools.com/" target="blank">blank W3Schools!</a> <br>
-    <a href="https://www.w3schools.com/" target="_parent">_parent W3Schools!</a> <br>
-    <a href="https://www.w3schools.com/" target="_top">_top W3Schools!</a> <br>
-    <embed type="image/jpg" src="https://www.w3schools.com/tags/pic_trulli.jpg" width="300" height="200">
-    <br>
-    <button title="hi click me" onclick="image()">click</button>
-    <p style="color:yellow;">I am normal</p>
-    <p style="color:red;">I am red</p>
-    <p style="color:blue;">I am blue</p>
-    <p style="font-size:50px;color:skyblue;">I am big</p>
-    <table align="center">
-        <colgroup>
-            <col style="background-color: red;">
-            <col style="background-color: green;">
-            <col style="background-color: blue;">
-        </colgroup>
-        <tr>
-            <th>ISBN</th>
-            <th>Title</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>3476896</td>
-            <td>My first HTML</td>
-            <td>$53</td>
-        </tr>
-        <tr>
-            <td>3476896</td>
-            <td>My first HTML</td>
-            <td>$53</td>
-        </tr>
-        <tr>
-            <td>3476896</td>
-            <td>My first HTML</td>
-            <td>$53</td>
-        </tr>
-    </table>
-    <table class="table2">
-        <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Savings</th>
-        </tr>
-        <tr>
-            <td>Peter</td>
-            <td>Griffin</td>
-            <td>$100</td>
-        </tr>
-        <tr>
-            <td>Lois</td>
-            <td>Griffin</td>
-            <td>$150</td>
-        </tr>
-        <tr>
-            <td>Joe</td>
-            <td>Swanson</td>
-            <td>$300</td>
-        </tr>
-        <tr>
-            <td>Cleveland</td>
-            <td>Brown</td>
-            <td>$250</td>
-        </tr>
-    </table>
+  <footer>
+    <p>Footer</p>
+  </footer>
+  <h1>hello this is demo git projects</h1>
+  <h3>by jaydip gohil</h3>
+  <h5>thank you</h5>
+  <p id="demo" onclick="alert('hi jaydip ')">hello jaydip</p>
+  <ol>game
+    <li>cricket</li>
+    <li>ludo</li>
+    <li>tenis</li>
+  </ol>
+  <ul>game
+    <li>cricket</li>
+    <li>ludo</li>
+    <li>tenis</li>
+  </ul>
+  <blockquote>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis bibendum leo. Fusce et diam arcu. Donec
+    vel orci tortor. Cras vel erat blandit justo lobortis venenatis ac quis dolor. Donec nec facilisis tortor, sit
+    amet ornare odio. Nulla luctus leo ut pulvinar porttitor. Quisque dignissim scelerisque malesuada. Cras tempor
+    nunc dapibus lorem hendrerit, et aliquet ligula feugiat. Fusce at dolor nulla. Nunc non posuere est, eget
+    consequat odio. Vivamus imperdiet maximus lectus vel volutpat. Curabitur volutpat feugiat neque ac viverra.
 
-    
+    Cras vitae erat venenatis, bibendum est sit amet, aliquet elit. Proin neque elit, venenatis ut porta nec, congue
+    at magna. Quisque quis eros sodales orci ornare ornare vitae vel neque. Mauris a magna at odio sodales viverra
+    sed commodo neque. Fusce in pharetra magna. Integer sed quam at dolor malesuada dictum non ac est. Sed luctus
+    imperdiet mauris, non laoreet diam ultricies non. Cras sit amet dignissim erat, porttitor pretium urna. Nullam
+    mollis lorem et auctor scelerisque. Donec ac metus rhoncus, rhoncus erat ornare, luctus nulla. Donec accumsan
+    ultricies cursus. Nulla quis ipsum quis nulla venenatis ultricies. Pellentesque consectetur, nisl id venenatis
+    congue, magna sem rutrum sem, ut accumsan nisl erat nec magna.
+
+    Suspendisse tempor eget augue a pretium. Phasellus in quam elementum neque posuere tristique. Nullam dapibus
+    augue id dapibus iaculis. Mauris tempus congue ligula, ut pellentesque neque consectetur et. Phasellus sodales
+    bibendum nibh, ac suscipit est pretium at. Phasellus mauris sapien, tincidunt quis mattis id, dapibus ut orci.
+    Sed quis dolor nulla.
+
+    Ut id facilisis metus. Pellentesque eu mollis libero. Sed at sagittis nulla. Nam facilisis sapien vel egestas
+    laoreet. Nam fermentum nisi sed dapibus pellentesque. Fusce vitae ligula convallis, tincidunt mauris ac, sodales
+    mi. Nunc at porta elit. Suspendisse placerat vehicula diam id sollicitudin. Nam sollicitudin lectus risus,
+    pharetra auctor nulla ultrices non. Mauris sit amet dolor vitae sem viverra tincidunt. Phasellus tincidunt eros
+    non mi consequat, ac finibus diam rutrum. Sed consequat eget urna et posuere. Sed sollicitudin ipsum vitae
+    sapien imperdiet porta.
+
+    Fusce blandit diam turpis, nec feugiat quam tempus a. Sed gravida, quam id dapibus venenatis, justo diam tempus
+    velit, eget lacinia purus nulla quis purus. Mauris porttitor id dui quis ornare. Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis velit sit
+    amet metus rutrum aliquet. Curabitur ac ultrices risus. Aliquam molestie lorem vitae massa ultrices, quis
+    pretium ligula facilisis. Nullam fermentum molestie urna eget venenatis. Pellentesque sit amet scelerisque
+    magna. Donec dolor orci, pharetra ut sem id, dignissim ornare risus. Fusce iaculis vulputate bibendum</p>
+  </blockquote>
+  <a href="https://www.w3schools.com/" target="_self"> _self!</a> <br>
+  <a href="https://www.w3schools.com/" target="_blank">_blank W3Schools!</a> <br>
+  <a href="https://www.w3schools.com/" target="blank">blank W3Schools!</a> <br>
+  <a href="https://www.w3schools.com/" target="_parent">_parent W3Schools!</a> <br>
+  <a href="https://www.w3schools.com/" target="_top">_top W3Schools!</a> <br>
+  <embed type="image/jpg" src="https://www.w3schools.com/tags/pic_trulli.jpg" width="300" height="200">
+  <br>
+  <button title="hi click me" onclick="image()">click</button>
+  <p style="color:yellow;">I am normal</p>
+  <p style="color:red;">I am red</p>
+  <p style="color:blue;">I am blue</p>
+  <p style="font-size:50px;color:skyblue;">I am big</p>
+  <table align="center">
+    <colgroup>
+      <col style="background-color: red;">
+      <col style="background-color: green;">
+      <col style="background-color: blue;">
+    </colgroup>
+    <tr>
+      <th>ISBN</th>
+      <th>Title</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>3476896</td>
+      <td>My first HTML</td>
+      <td>$53</td>
+    </tr>
+    <tr>
+      <td>3476896</td>
+      <td>My first HTML</td>
+      <td>$53</td>
+    </tr>
+    <tr>
+      <td>3476896</td>
+      <td>My first HTML</td>
+      <td>$53</td>
+    </tr>
+  </table>
+  <table class="table2">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Savings</th>
+    </tr>
+    <tr>
+      <td>Peter</td>
+      <td>Griffin</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>Lois</td>
+      <td>Griffin</td>
+      <td>$150</td>
+    </tr>
+    <tr>
+      <td>Joe</td>
+      <td>Swanson</td>
+      <td>$300</td>
+    </tr>
+    <tr>
+      <td>Cleveland</td>
+      <td>Brown</td>
+      <td>$250</td>
+    </tr>
+  </table>
+
+  <p><samp>File not found.<br>Press F1 to continue</samp></p>
+  <h1>The article element</h1>
+
+  <article>
+    <h2>Google Chrome</h2>
+    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web
+      browser today!</p>
+  </article>
+
+  <article>
+    <h2>Mozilla Firefox</h2>
+    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web
+      browser since January, 2018.</p>
+  </article>
+
+  <article>
+    <h2>Microsoft Edge</h2>
+    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet
+      Explorer.</p>
+  </article>
+
 </body>
 
 </html>
